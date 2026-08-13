@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 40px;
+    align-items: center;
+}
+
+.importante{
+    font-weight: bold;
+    text-decoration: underline;
+}
+#contenedor-marcas {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;/*centra horizontalmente*/
+    align-items: center; /*centra verticalmente*/
+    padding: 0 200px;
+    img{
+        max-width: 300px;
+
+    }
+}
+#seccion-marcas{
+    background-image: url("img/background1.png");
+    background-position: center;
+    background-size: cover;
+
+
+}
+#seccion-nosotros{
+    background-image: url("img/background2.png");
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    padding: 20px 50px;
+    div{
+        width: 50%;
+    }
+    img{
+        width: 80%;
+        box-shadow: 40px 40px #4e5c53;
+        border-radius: 3px;
+        margin-left: 20px;
+
+    }
+    
+}
+#seccion-fundacion{
+    background-image: url("img/background2.png");
+    
+}
+#seccion-contacto{
+    background-image: url("img/background2.png");
+    
+}
+footer {
+    background-color: #;
+}
+.texto-invertido{
+    color: white;
+}

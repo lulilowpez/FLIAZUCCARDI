@@ -14,48 +14,157 @@ header{
 }
 #contenedor-marcas {
     display:flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;/*centra horizontalmente*/
-    align-items: center; /*centra verticalmente*/
-    padding: 0 200px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 800px;
     img{
-        max-width: 300px;
+        max-width: 100px;
+        margin: 0px 20px;
+        box-shadow: 5px 5px 10px 5px #0000001d;
+        border-radius: 3px;
+        border: 1px solid #0000001d;
 
     }
 }
 #seccion-marcas{
+    height: 100vh;
     background-image: url("img/background1.png");
     background-position: center;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    
 
 
 }
 #seccion-nosotros{
     background-image: url("img/background2.png");
+    background-position: center;
     background-size: cover;
-    display: flex;
-    align-items: center;
-    padding: 20px 50px;
-    div{
-        width: 50%;
+    >.contenedor-chico /* >. indica que contenedor chico es hijo de seccion nosotros*/
+    {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 40px 0px;
+        div
+        {
+            flex:1;
+            *{
+                margin: 10px 0px;
+            }
+        }
+        hr{
+            width: 100%;
+            border: 1px solid #7873731d;
+        }
     }
     img{
-        width: 80%;
+        width: 100%;
         box-shadow: 40px 40px #4e5c53;
         border-radius: 3px;
-        margin-left: 20px;
+        /*margin-left: 20px;*/
 
     }
     
 }
 #seccion-fundacion{
-    background-image: url("img/background2.png");
+    background-color:#91b7c2;
+    >img{
+        display: block;
+        margin: auto;
+        width: 300%;
+    }
+    .contenedor-chico
+    {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+       
+    .derecha
+    {
+        background-image: filter(url("img/fundacion.png"), brightness(0.5));
+        backgroung-image: url("img/fundacion.png");
+        background-position: center;
+        background-size: cover;
+        height: 400%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 80px 20px;
+    }
+article{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px; /*para que los elementos tengan un espacio entre ellos; evitamos poner margin a c/u*/
+    }
     
 }
-#seccion-contacto{
-    background-image: url("img/background2.png");
-    
+#otras-noticias-container
+{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    color: rgb(220, 220, 220);
+    div
+    {
+        margin-top: auto;
+        &.active
+        {
+            color:white
+        }
+    }
+}
+
+#seccion-contacto
+{
+    background-color: #28373c;
+    .contenedor-chico>div
+    {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        >*{
+            flex:1;
+
+        }
+    }
+    #mapa
+    {
+        width: 100%;
+        height: 400px;
+    }
+    form
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    #contacto-detalle:hover
+    {
+        background-color: #304147;
+        transition: ease-in-out 100ms;
+    }
+}
+.contenedor-chico
+{
+    width: 800px;
+    margin: auto;
+}
+.card
+{
+   width: 200%; 
+   text-align: center;
+   background-color: #28373c;
+   padding: 20px;
+   margin: 20px;
 }
 footer {
     background-color: #2d373d;
@@ -74,4 +183,10 @@ footer {
 }
 .texto-invertido{
     color: white;
+}
+.botom
+{
+    background-color: #91b7c2;
+    border-radius: 3px;
+    border: none;
 }

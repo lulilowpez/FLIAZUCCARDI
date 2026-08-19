@@ -85,7 +85,19 @@ header{
             align-items: center;
             gap: 20px;
         }
-       
+    
+    .izquierda
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 40px 20px;
+            gap: 20px;
+            >img
+            {
+                width: 200px
+            }
+        }
     .derecha
     {
         background-image: filter(url("img/fundacion.png"), brightness(0.5));
